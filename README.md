@@ -3,9 +3,8 @@ Website of the CERN EP-NU group, based on the [astroship](https://github.com/sur
 
 ### 1. Clone the repo
 
-Make sure you are inside your project folder first.
-
 ### 2. Install Dependencies
+Make sure you are inside your project folder first.
 
 ```bash
 npm install
