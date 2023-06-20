@@ -44,7 +44,7 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 ## 👀 Useful Info
 
-Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
+Check out [Astro Docs](https://docs.astro.build)
 
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
