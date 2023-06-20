@@ -14,7 +14,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">CERN Neutrino Group (EP-NU)</Fragment>
+      <Fragment slot="title">CERN Neutrino Group (EP-NU) members</Fragment>
       <Fragment slot="desc">Cooler than Liquid Argon. Hotter than a Supernova. Room temperature IQ.</Fragment>
     </Sectionhead>
 
@@ -23,9 +23,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Figuring out neutrinos.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Smaller than an atom, bigger than a dream: We've come from all over the world to CERN to push the boundaries of neutrino physics. We're doing our best... 
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -50,8 +48,11 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
               <h2 class="text-lg text-gray-800">
                 {teamMemberEntry.data.name}
               </h2>
-              <h3 class="text-sm text-slate-500">
+              <h3 class="text-sm text-gray-800 font-bold">
                 {teamMemberEntry.data.title}
+              </h3>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.description}
               </h3>
             </div>
           </div>
