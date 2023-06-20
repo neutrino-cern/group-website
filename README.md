@@ -3,7 +3,7 @@ Website of the CERN EP-NU group, based on the [astroship](https://github.com/sur
 
 ### 1. Clone the repo
 
-The `.` will clone it to the current directory so make sure you are inside your project folder first.
+Make sure you are inside your project folder first.
 
 ### 2. Install Dependencies
 
