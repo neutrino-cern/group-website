@@ -1,0 +1,32 @@
+---
+interface Props {
+  href: string;
+  style?: "inline" | "chipmunk";
+  class?: string;
+  [x: string]: any;
+}
+
+const {
+  href,
+  block,
+  size = "lg",
+  style = "primary",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const styles = {
+  inline: "text-blue-500 hover:text-blue-600",
+  chipmunk: "bg-blue-500 text-white hover:bg-blue-600",
+};
+---
+
+<a
+  href={href}
+  {...rest}
+  class:list={[
+    styles[style],
+    className,
+  ]}
+  ><slot />
+</a>

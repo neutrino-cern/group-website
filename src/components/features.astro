@@ -1,6 +1,8 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import Slink from "@components/ui/slink.astro";
 
 const features = [
   {
@@ -16,25 +18,25 @@ const features = [
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "Systematic Uncertainties",
+    title: "Cross Section Systematic Uncertainties",
     description:
       "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
     icon: "bx:bxs-data",
   },
   {
-    title: "Broad Integration",
+    title: "Supernova Neutrinos",
     description:
       "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
     icon: "bx:bxs-bot",
   },
   {
-    title: "SEO Enabled",
+    title: "ProtoDUNE @ CERN",
     description:
       "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "Outreach",
     description:
       "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
     icon: "bx:bxs-user",
@@ -44,11 +46,10 @@ const features = [
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Figuring out neutrinos: Smaller than an atom, bigger than a dream.
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    We are a <Slink style=inline href=team>diverse group of physicists</Slink> working and collaborating in different current and next-generation experiments, like T2K or DUNE, to understand the nature of neutrinos. Read below to learn more about our research.
   </p>
 </div>
 

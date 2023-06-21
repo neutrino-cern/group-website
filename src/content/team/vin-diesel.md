@@ -2,7 +2,7 @@
 draft: false
 name: "Vin Diesel"
 title: "Summer student"
-description: "What?"
+description: "Family."
 avatar: {
     src: "/src/assets/member-photos/vin-diesel-2.webp",
     alt: "What?"

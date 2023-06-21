@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Laura Munteanu"
-title: "Senior Research Fellow"
+title: "Physicist Expert"
 description: "T2K ND280 Upgrade and Neutrino Interaction Uncertainties with DUNE"
 avatar: {
     src: "/src/assets/member-photos/laura.png",

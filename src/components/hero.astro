@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import headerImage from "/src/assets/spacemunk.png";
+import headerImage from "/src/assets/protodune-group.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -11,11 +11,11 @@ import { Icon } from "astro-icon";
     <Picture
       src={headerImage}
       alt="Chipmunk"
-      widths={[200, 400, 600]}
+      widths={[200, 400, 600, 1200, 2400]}
       aspectRatio="4:3"
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
-      format="avif"
+
       class="w-full rounded-xl transition hover:-translate-y-2 hover:shadow-xl"
     />
   </div>
@@ -25,7 +25,7 @@ import { Icon } from "astro-icon";
       CERN Neutrino Group
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      The Neutrino Group at CERN is focused on... neutrinos!
+      Cooler than Liquid Argon. Hotter than a Supernova. Room temperature IQ.
     </p>
 
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -33,11 +33,11 @@ import { Icon } from "astro-icon";
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/neutrino-cern/neutrino-cern.github.io"
+        href="https://neutrino-cern.github.io/"
         class="flex gap-1 items-center justify-center"
         target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        <Icon name="bx:bxs-rocket" class="h-6"/>
+        Group Docs
       </Link>
     </div>
   </div>
