@@ -1,31 +1,45 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import headerImage from "/src/assets/protodune-group.jpg";
+import groupLogo from "/src/assets/cenf-logo.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import Slink from "@components/ui/slink.astro";
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={headerImage}
-      alt="Chipmunk"
+      alt="Cool people"
       widths={[200, 400, 600, 1200, 2400]}
       aspectRatio="4:3"
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
-
-      class="w-full rounded-xl transition hover:-translate-y-2 hover:shadow-xl"
+      class="w-full rounded-xl shadow-xl transition hover:-translate-y-2 hover:shadow-xl"
     />
   </div>
+
   <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+    <div class="flex justify-center">
+      <Picture
+        src={groupLogo}
+        alt="groupLogo"
+        widths={[200, 400, 600, 1200, 2400]}
+        aspectRatio="1:1"
+        sizes="(max-width: 800px) 100vw, 100px"
+        loading="eager"
+        class="mb-4"
+      />
+    </div>
+
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
       CERN Neutrino Group
     </h1>
+
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Cooler than Liquid Argon. Hotter than a Supernova. Room temperature IQ.
+      We are a <Slink style=inline href=team>diverse group of physicists</Slink> working and collaborating in different current and next-generation experiments, like T2K or DUNE, to understand the nature of neutrinos. Read below to learn more about our research.
     </p>
 
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -33,12 +47,25 @@ import { Icon } from "astro-icon";
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://neutrino-cern.github.io/"
+        href="research"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon name="mdi:book-outline" class="h-6"/>
+        Research topics
+      </Link>
+
+      <Link
+        size="lg"
+        style="primary"
+        rel="noopener"
+        href="neutrinos"
         class="flex gap-1 items-center justify-center"
         target="_blank">
         <Icon name="bx:bxs-rocket" class="h-6"/>
-        Group Docs
+        Learn about neutrinos!
       </Link>
     </div>
   </div>
+
 </main>
+

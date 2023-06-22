@@ -18,8 +18,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Neutrino Group"
-  : "Neutrino Group at CERN";
+  ? title + " | " + "EP-NU"
+  : "CERN Neutrino Group";
 ---
 
 <!DOCTYPE html>
@@ -33,10 +33,10 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Official website of EP-NU, the neutrino group at CERN."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
+        creator: "@Pabce @RadiRadev",
         site: "@web3templates",
         card: "summary_large_image",
       }}
@@ -44,11 +44,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `EP-NU CERN Neutrino Group`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "EP-NU CERN Neutrino Group main page sceenshot",
         },
       }}
     />

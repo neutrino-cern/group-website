@@ -1,16 +1,59 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import duneLogo from "/src/assets/experiment-logos/dune-logo-v.jpg";
+import t2kLogo from "/src/assets/experiment-logos/t2k_logo_small.png";
+import sndLogo from "/src/assets/experiment-logos/snd-logo.png";
+import icarusLogo from "/src/assets/experiment-logos/icarus-logo-small.jpg";
+
 ---
 
 <div class="mt-24">
-  <h2 class="text-center text-slate-500">We work on these experiments</h2>
+  <h2 class="text-center text-4xl lg:text-5xl font-bold lg:tracking-tight">Our experiments</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <Icon class="h-8 md:h-12" name="simple-icons:atom" />
-    <Icon class="h-8 md:h-12" name="simple-icons:python" />
-    <Icon class="h-8 md:h-14" name="simple-icons:pytorch" />
-    <Icon class="h-8 md:h-16" name="simple-icons:centos" />
-    <Icon class="h-8 md:h-12" name="simple-icons:c" />
-    <Icon class="h-8 md:h-12" name="simple-icons:astro" />
+
+    <Picture
+    src={duneLogo}
+    alt="DUNE"
+    href="https://dunescience.org/"
+    widths={[200, 400, 600, 1200, 2400]}
+    sizes="180px"
+    loading="eager"
+    class="w-full"
+    />
+
+    <Picture
+    src={t2kLogo}
+    alt="t2k"
+    href="https://t2k-experiment.org/"
+    widths={[200, 400, 600, 1200, 2400]}
+    sizes="180px"
+    loading="eager"
+    class="w-full"
+    />
+
+    <Picture
+    src={sndLogo}
+    alt="snd"
+    href="https://snd-lhc.web.cern.ch/"
+    widths={[200, 400, 600, 1200, 2400]}
+    sizes="180px"
+    loading="eager"
+    class="w-full"
+    />
+
+    <Picture
+    src={icarusLogo}
+    alt="icarus"
+    href="https://icarus.sites.lngs.infn.it/"
+    widths={[200, 400, 600, 1200, 2400]}
+    sizes="100px"
+    loading="eager"
+    class="w-full"
+    />
+    
+
   </div>
 </div>
+
