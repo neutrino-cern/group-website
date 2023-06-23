@@ -6,72 +6,115 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import Slink from "@components/ui/slink.astro";
 
+const transition = "[700 ms] ease-in-out";
 ---
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
 
-  <div id="default-carousel" class="relative w-full md:order-1 rounded-xl shadow-xl transition hover:-translate-y-2 hover:shadow-xl" data-carousel="slide">
-    <!-- Carousel wrapper (465 is for 4:3 ratio...) -->
-    <div class="relative h-[465px] overflow-hidden rounded-xl">
-      <!-- Item 1 -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <Picture
-          src={headerImage}
-          alt="Cool people"
-          widths={[200, 400, 600, 1200, 2400]}
-          aspectRatio="4:3"
-          sizes="(max-width: 800px) 100vw, 620px"
-          loading="eager"
-          class="absolute block w-full rounded-xl shadow-xl"
-        />
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <Picture
-          src="/src/assets/einstein.png"
-          alt="Einstein"
-          widths={[200, 400, 600, 1200, 2400]}
-          aspectRatio="4:3"
-          sizes="(max-width: 800px) 100vw, 620px"
-          loading="eager"
-          class="absolute block w-full rounded-xl shadow-xl"
-        />
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <Picture
-          src="/src/assets/spacemunk.png"
-          alt="Spacemunk"
-          widths={[200, 400, 600, 1200, 2400]}
-          aspectRatio="4:3"
-          sizes="(max-width: 800px) 100vw, 620px"
-          loading="eager"
-          class="absolute block w-full rounded-xl shadow-xl"
-        />
-      </div>
-    </div>
-      <!-- Slider indicators -->
-      <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-      </div>
-      <!-- Slider controls -->
-  </div>
+  <!-- Stupid Carousel that took me days to implement -->
+  <div
+    id="carouselExampleIndicators"
+    class="relative s-hidden w-full order-1 rounded-xl shadow-xl transition hover:shadow-xl mt-10 lg:-mt-10 max-w-xl lg:max-w-7xl"
+    data-te-carousel-init
+    data-te-carousel-slide
+    data-te-interval="4500">
 
-  
-  {/* <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={headerImage}
-      alt="Cool people"
-      widths={[200, 400, 600, 1200, 2400]}
-      aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      class="w-full rounded-xl shadow-xl transition hover:-translate-y-2 hover:shadow-xl"
-    />
-  </div> */}
- 
+    <!--Carousel indicators-->
+    <div
+      class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+      data-te-carousel-indicators>
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to="0"
+        data-te-carousel-active
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-current="true"
+        aria-label="Slide 1"></button>
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to="1"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 2"></button>
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to="2"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 3"></button>
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to="3"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 4"></button>
+    </div>
+
+    <!--Carousel items-->
+    <div
+      class="relative w-full overflow-hidden aspect-[4/3] rounded-xl after:clear-both after:block after:content-['']">
+      <!--First item-->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item
+        data-te-carousel-active>
+          <Picture
+            src={headerImage}
+            alt="Cool people"
+            widths={[200, 400, 600, 1200, 2400]}
+            aspectRatio="4:3"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            class="absolute block w-full rounded-xl shadow-xl"
+          />
+      </div>
+      <!--Second item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item>
+          <Picture
+            src="/src/assets/spacemunk.png"
+            alt="Spacemunk"
+            widths={[200, 400, 600, 1200, 2400]}
+            aspectRatio="4:3"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            class="absolute block w-full rounded-xl shadow-xl"
+          />
+      </div>
+      <!--Third item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item>
+          <Picture
+            src="/src/assets/einstein.png"
+            alt="Einstein"
+            widths={[200, 400, 600, 1200, 2400]}
+            aspectRatio="4:3"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            class="absolute block w-full rounded-xl shadow-xl"
+          />
+      </div>
+      <!--Fourth item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item>
+          <Picture
+            src="/src/assets/chessmunk.png"
+            alt="Chessmunk"
+            widths={[200, 400, 600, 1200, 2400]}
+            aspectRatio="4:3"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            class="absolute block w-full rounded-xl shadow-xl"
+          />
+      </div>
+
+    </div>
+
+  </div>
 
   <div>
     <div class="flex justify-center">
@@ -80,17 +123,17 @@ import Slink from "@components/ui/slink.astro";
         alt="groupLogo"
         widths={[200, 400, 600, 1200, 2400]}
         aspectRatio="1:1"
-        sizes="(max-width: 800px) 100vw, 100px"
+        sizes="(max-width: 300px) 100vw, 100px"
         loading="eager"
         class="mb-4"
       />
     </div>
 
-    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center pr-4">
       CERN Neutrino Group
     </h1>
 
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+    <p class="text-lg mt-4 text-slate-600 max-w-xl pr-4">
       We are a <Slink style=inline href=team>diverse group of physicists</Slink> working and collaborating in different current and next-generation experiments, like T2K or DUNE, to understand the nature of neutrinos. Read below to learn more about our research.
     </p>
 
