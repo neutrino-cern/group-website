@@ -5,25 +5,32 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-// Filter team entries with 'draft: false' & date before current date
+// Filter team member entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
+
+// Filter visitor entries with 'draft: false' & date before current date
+const publishedVisitors = await getCollection("visitors", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// TODO: Must be a better way than just duplicating the code below...
 ---
 
-<Layout title="About">
+<Layout title="Team">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">CERN Neutrino Group (EP-NU) members</Fragment>
+      <Fragment slot="title">CERN Neutrino Group (EP-NU) team</Fragment>
       <Fragment slot="desc">Cooler than Liquid Argon. Hotter than a Supernova. Room temperature IQ.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Figuring out neutrinos.
+        Members.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Smaller than an atom, bigger than a dream: We've come from all over the world to CERN to push the boundaries of neutrino physics. We're doing our best... 
+        We've come from all over the world to CERN to push the boundaries of neutrino physics. We're doing our best... 
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -48,7 +55,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
               <h2 class="text-lg text-gray-800">
                 {teamMemberEntry.data.name}
               </h2>
-              <h3 class="text-sm text-gray-800 font-bold">
+              <h3 class="text-sm text-slate-600 font-bold">
                 {teamMemberEntry.data.title}
               </h3>
               <h3 class="text-sm text-slate-500">
@@ -58,16 +65,19 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
           </div>
         ))
       }
-    
     </div>
+
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Visitors
+        Visitors.
       </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Just passing by...
+      </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
-        publishedTeamMembers.map((teamMemberEntry) => (
+        publishedVisitors.map((teamMemberEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
@@ -87,15 +97,18 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
               <h2 class="text-lg text-gray-800">
                 {teamMemberEntry.data.name}
               </h2>
-              <h3 class="text-sm text-slate-500">
+              <h3 class="text-sm text-slate-600 font-bold">
                 {teamMemberEntry.data.title}
+              </h3>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.description}
               </h3>
             </div>
           </div>
         ))
       }
-    
     </div>
+
     
   </Container>
 </Layout>
