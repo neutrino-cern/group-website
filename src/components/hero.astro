@@ -1,17 +1,21 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import headerImage from "/src/assets/protodune-group.jpg";
 import groupLogo from "/src/assets/cenf-logo.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import Slink from "@components/ui/slink.astro";
+
+import headerImage from "/src/assets/protodune-group.jpg";
+import spacemunk from "/src/assets/spacemunk.png";
+import einstein from "/src/assets/einstein.png";
+import chessmunk from "/src/assets/chessmunk.png";
 
 const transition = "[700 ms] ease-in-out";
 ---
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
 
-  <!-- Stupid Carousel that took me days to implement -->
+  <!-- Stupid Carousel that took me days o implement -->
   <div
     id="carouselExampleIndicators"
     class="relative s-hidden w-full order-1 rounded-xl shadow-xl transition hover:shadow-xl mt-10 lg:-mt-10 max-w-xl lg:max-w-7xl"
@@ -74,7 +78,7 @@ const transition = "[700 ms] ease-in-out";
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
           <Picture
-            src="/src/assets/spacemunk.png"
+            src={spacemunk}
             alt="Spacemunk"
             widths={[200, 400, 600, 1200, 2400]}
             aspectRatio="4:3"
@@ -88,7 +92,7 @@ const transition = "[700 ms] ease-in-out";
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
           <Picture
-            src="/src/assets/einstein.png"
+            src={einstein}
             alt="Einstein"
             widths={[200, 400, 600, 1200, 2400]}
             aspectRatio="4:3"
@@ -102,7 +106,7 @@ const transition = "[700 ms] ease-in-out";
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
           <Picture
-            src="/src/assets/chessmunk.png"
+            src={chessmunk}
             alt="Chessmunk"
             widths={[200, 400, 600, 1200, 2400]}
             aspectRatio="4:3"
