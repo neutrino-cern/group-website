@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  sitemap: true,
+  // sitemap: true,
   site: 'https://neutrino-test.web.cern.ch/',
   outDir: 'public',
   publicDir: 'static',
