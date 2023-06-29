@@ -3,6 +3,7 @@ import { Carousel } from "tw-elements";
 import { initTE } from "tw-elements";
 
 // TODO: Proper import of the images and use of Picture component
+// TODO: load lighter images (like the Picture component does)
 
     const App = () => {
       useEffect(() => {
