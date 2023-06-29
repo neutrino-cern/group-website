@@ -7,7 +7,10 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  sitemap: true,
+  site: 'https://neutrino-test.web.cern.ch/',
+  outDir: 'public',
+  publicDir: 'static',
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), mdx(), sitemap(), react()]
