@@ -5,18 +5,23 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import Slink from "@components/ui/slink.astro";
 
-import headerImage from "/src/assets/protodune-group.jpg";
-import spacemunk from "/src/assets/spacemunk.png";
-import einstein from "/src/assets/einstein.png";
-import chessmunk from "/src/assets/chessmunk.png";
+// import headerImage from "/src/assets/protodune-group.jpg";
+// import spacemunk from "/src/assets/spacemunk.png";
+// import einstein from "/src/assets/einstein.png";
+// import chessmunk from "/src/assets/chessmunk.png";
 
 const transition = "[700 ms] ease-in-out";
+
+import Chip from "@components/carousel.jsx";
 ---
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
 
-  <!-- Stupid Carousel that took me days o implement -->
-  <div
+  <Chip client:only="react"/>
+
+  <!-- Stupid Carousel that took me days to implement -->
+
+  {/* <div
     id="carouselExampleIndicators"
     class="relative s-hidden w-full order-1 rounded-xl shadow-xl transition hover:shadow-xl mt-10 lg:-mt-10 max-w-xl lg:max-w-7xl"
     data-te-carousel-init
@@ -118,7 +123,7 @@ const transition = "[700 ms] ease-in-out";
 
     </div>
 
-  </div>
+  </div> */}
 
   <div>
     <div class="flex justify-center">
