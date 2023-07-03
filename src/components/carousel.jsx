@@ -6,6 +6,7 @@ const transition = "[700 ms] ease-in-out";
 
 // TODO: Proper import of the images and use of Picture component
 // TODO: load lighter images (like the Picture component does)
+// https://mediaarchive.cern.ch/MediaArchive/Photo/Public/2005/0511013/0511013_01/0511013_01-A4-at-144-dpi.jpg
 
     const App = () => {
       useEffect(() => {
@@ -64,7 +65,7 @@ const transition = "[700 ms] ease-in-out";
             <img
               src="protodune-group.jpg"
               class="absolute block w-full"
-              alt="Group photo" />
+              alt="Group photo"  />
           </div>
           {/* <!--Second item--> */}
           <div
