@@ -1,8 +1,14 @@
+---
+import cernLogo from '../assets/cern-logo.png'
+import { Picture } from "@astrojs/image/components";
+---
+
 <footer class="my-20">
   <p class="text-center text-sm text-slate-500">
     Copyright © {new Date().getFullYear()} CERN. All rights reserved.
   </p>
-  <!--
+
+  {/* <!--
     Can we ask you a favor 🙏
     Please keep this backlink on your website if possible.
     or Purchase a commercial license from https://web3templates.com
@@ -15,5 +21,20 @@
       class="hover:underline">
       Web3Templates
     </a>
-  </p>
+  </p> */}
+  
+  <div class="flex gap-8 md:gap-20 items-center justify-center flex-wrap">
+  <a href="https://home.cern" target="_blank" rel="noopener noreferrer">
+    <Picture
+      src={cernLogo}
+      alt="CERN logo"
+      class="block mt-5 w-full"
+      aspectRatio="1:1"
+      sizes="60px"
+      widths={[200, 400]}
+    />
+  </a>
+  </div>
+
+
 </footer>
