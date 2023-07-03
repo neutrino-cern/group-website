@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Carousel } from "tw-elements";
 import { initTE } from "tw-elements";
 
+const transition = "[700 ms] ease-in-out";
+
 // TODO: Proper import of the images and use of Picture component
 // TODO: load lighter images (like the Picture component does)
 
