@@ -27,9 +27,9 @@ const { entry } = Astro.props;
 
 <Layout title={entry.data.name}>
     <Container>
-      <main class="lg:flex place-items-left pt-16 pb-8 md:pt-12 md:pb-24">
+      <main class="md:flex place-items-left pt-16 pb-8 md:pt-12 md:pb-24">
     
-        <div class="flex lg:justify-start justify-center mb-10">
+        <div class="flex md:justify-start justify-center mb-10">
           <Picture
             src={entry.data.avatar.src}
             alt={entry.data.avatar.alt}
@@ -43,7 +43,7 @@ const { entry } = Astro.props;
           />
         </div>
         
-        <div class="block max-w-[400px] lg:justify-start justify-center pl-12">
+        <div class="block max-w-[400px] md:justify-start justify-center pl-12">
           <h2 class="text-2xl text-gray-800">
             {entry.data.name}
           </h2>
