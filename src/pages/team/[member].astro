@@ -34,6 +34,7 @@ const { entry } = Astro.props;
 // Log the json tree to the console (pretty printed)
 // console.log(JSON.stringify(data, null, 2));
 
+// TODO: fix ugly member page buttons
 ---
 
 <Layout title={entry.data.name}>
@@ -77,7 +78,7 @@ const { entry } = Astro.props;
             {
             entry.data.publicationLink &&
               <Link
-                size="lg"
+                size="md"
                 style="inspire"
                 rel="noopener"
                 href={entry.data.publicationLink}
@@ -91,7 +92,7 @@ const { entry } = Astro.props;
             {
             entry.data.githubLink &&
               <Link
-                size="lg"
+                size="md"
                 style="primary"
                 rel="noopener"
                 href={entry.data.githubLink}
