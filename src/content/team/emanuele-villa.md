@@ -3,6 +3,7 @@ draft: false
 name: "Emanuele Villa"
 title: "CERN Doctoral Student"
 description: "Hardware for T2K and DUNE, low energy and DAQ in DUNE, Neutrino Outreach Coordinator"
+publicationLink: "https://inspirehep.net/authors/2171980"
 avatar: {
     src: "/member-photos/emanuele.jpg",
     alt: "Emmanuele Villa"

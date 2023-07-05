@@ -24,6 +24,8 @@ const teamCollection = defineCollection({
     name: z.string(),
     title: z.string(),
     description: z.string(),
+    publicationLink: z.string().optional(),
+    githubLink: z.string().optional(),
     avatar: z.object({
       src: z.string(),
       alt: z.string(),

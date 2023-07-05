@@ -23,27 +23,31 @@ export async function getStaticPaths() {
 
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
+
+
+// INSPIRE test
+// import fetch from 'node-fetch';
+
+// let response = await fetch('https://inspirehep.net/api/literature?fields=titles&sort=mostrecent&size=5&q=a%20L.I.Munteanu.1');
+// let data = await response.json();
+
+// Log the json tree to the console (pretty printed)
+// console.log(JSON.stringify(data, null, 2));
+
 ---
 
 <Layout title={entry.data.name}>
     <Container>
-      <main class="md:flex place-items-left pt-16 pb-8 md:pt-12 md:pb-24">
-    
-        <div class="flex md:justify-start justify-center mb-10">
-          <Picture
-            src={entry.data.avatar.src}
-            alt={entry.data.avatar.alt}
-            sizes="(max-width: 600px) 80vw, 400px"
-            widths={[200, 400, 800, 1200]}
-            aspectRatio="5:6"
-            background="#ffffff"
-            fit="cover"
-            position="center"
-            class="rounded-md"
-          />
-        </div>
-        
-        <div class="block max-w-[400px] md:justify-start justify-center pl-12">
+      
+      <main class="md:flex place-items-left pt-6 pb-8 md:pt-12 md:pb-24">
+
+        {/* {data.hits.hits.map((hit, i) => (
+          <div key={i}>
+              <h2>{hit.metadata.titles[0].title}</h2>
+          </div>
+        ))} */}
+
+        <div class="block max-w-[400px] justify-center md:px-12 px-2 md:order-2 order-first mb-6 md:-mb-6">
           <h2 class="text-2xl text-gray-800">
             {entry.data.name}
           </h2>
@@ -53,7 +57,53 @@ const { entry } = Astro.props;
           <p class="text-lg mt-4 text-slate-600 max-w-xl pr-4">
             {entry.data.description}
           </p>
-        <div/>
+        </div>
+
+        
+        <div class="block md:justify-start justify-center mb-10">
+          <Picture
+            src={entry.data.avatar.src}
+            alt={entry.data.avatar.alt}
+            sizes="(max-width: 640px) 100vw, 400px"
+            widths={[200, 400, 800, 1200]}
+            aspectRatio="5:6"
+            background="#ffffff"
+            fit="cover"
+            position="center"
+            class="rounded-md"
+          />
+
+          <div class="mt-6 sm:max-w-[400px] flex flex-col sm:flex-col gap-3">
+            {
+            entry.data.publicationLink &&
+              <Link
+                size="lg"
+                style="inspire"
+                rel="noopener"
+                href={entry.data.publicationLink}
+                class="flex gap-1 items-center justify-center"
+                target="_blank">
+                <Icon name="mdi:book-outline" class="h-6"/>
+                Publications
+              </Link>
+            }
+
+            {
+            entry.data.githubLink &&
+              <Link
+                size="lg"
+                style="primary"
+                rel="noopener"
+                href={entry.data.githubLink}
+                class="flex gap-1 items-center justify-center"
+                target="_blank">
+                <Icon name="mdi:github" class="h-6"/>
+                GitHub
+              </Link>
+            }
+          </div>
+
+        </div>
         
       </main>
 

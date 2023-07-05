@@ -3,6 +3,7 @@ draft: false
 name: "Laura Munteanu"
 title: "Physicist Expert"
 description: "T2K ND280 Upgrade and Neutrino Interaction Uncertainties with DUNE"
+publicationLink: "https://inspirehep.net/authors/2006730"
 avatar: {
     src: "/member-photos/laura.png",
     alt: "Laura Munteanu"

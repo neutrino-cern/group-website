@@ -1,9 +1,9 @@
 ---
 draft: false
 title: "Teaching a Chipmunk to Play Chess"
-snippet: "Chipmunks are smarter than they look. When properly train, they can understand abstract topics like neutrinos."
+snippet: "Chipmunks are smarter than they look. When properly trained, they can understand abstract topics like neutrinos."
 image: {
-    src: "chessmunk.png",
+    src: "/chessmunk.png",
     alt: "chipmunk staring at chess board"
 }
 publishDate: "2023-06-03 16:39"
