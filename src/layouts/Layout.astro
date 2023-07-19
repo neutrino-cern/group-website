@@ -66,12 +66,33 @@ const makeTitle = title
     </style>
 
     <!-- Include flowbite.js -->
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+    {/* <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script> */}
 
     <!-- Include tailwind elements -->
     <script is:inline
       type="text/javascript"
       src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+
+    
+    <!-- Include dark mode?? -->
+    {/* <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+    
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script> */}
 
 
 

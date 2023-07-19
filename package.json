@@ -29,11 +29,13 @@
     "flowbite": "^1.6.6",
     "node-fetch": "^3.3.1",
     "pnpm": "^8.6.5",
+    "preact": "^10.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tw-elements": "^1.0.0-beta2"
   },
   "devDependencies": {
+    "@astrojs/preact": "^2.2.1",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
