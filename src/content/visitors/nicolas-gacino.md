@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Nicolás Gaciño"
-title: "Summer student"
+title: "Summer Student"
 description: "T2K phenomenology with SuSA v2"
 avatar: {
     src: "/visitor-photos/nico.jpeg",

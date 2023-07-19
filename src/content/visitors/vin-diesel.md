@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Vin Diesel"
-title: "Summer student"
+title: "Summer Student"
 description: "Family."
 avatar: {
     src: "/visitor-photos/vin-diesel-2.webp",
