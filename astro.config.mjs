@@ -9,7 +9,7 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   // sitemap: true,
-  site: 'https://neutrino-test.web.cern.ch/',
+  site: 'https://neutrino.web.cern.ch/',
   outDir: 'public',
   publicDir: 'static',
   integrations: [tailwind(), image({
