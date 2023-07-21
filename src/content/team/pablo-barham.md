@@ -6,7 +6,7 @@ description: "Low Energy and Beyond the Standard Model physics @ DUNE"
 publicationLink: "https://inspirehep.net/authors/2060216"
 githubLink: "https://github.com/Pabce"
 avatar: {
-    src: "/member-photos/pablo.jpg",
+    src: "/member-photos/pablo.avif",
     alt: "Pablo Barham Alzás"
 }
 publishDate: "2022-11-09 15:39"

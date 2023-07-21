@@ -53,6 +53,7 @@ const transition = "[700 ms] ease-in-out";
             class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
             aria-label="Slide 4"></button>
         </div>
+
       
         {/* <!--Carousel items--> */}
         <div
@@ -63,7 +64,7 @@ const transition = "[700 ms] ease-in-out";
             data-te-carousel-item
             data-te-carousel-active>
             <img
-              src="protodune-group.jpg"
+              src="protodune-group.avif"
               class="absolute block w-full"
               alt="Group photo"  />
           </div>
@@ -72,7 +73,7 @@ const transition = "[700 ms] ease-in-out";
             class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item>
             <img
-              src="spacemunk.png"
+              src="spacemunk.avif"
               class="absolute block w-full"
               alt="Spacemunk" />
           </div>
@@ -81,7 +82,7 @@ const transition = "[700 ms] ease-in-out";
             class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item>
             <img
-              src="einstein.png"
+              src="einstein.avif"
               class="absolute block w-full"
               alt="Einstein" />
           </div>
@@ -90,7 +91,7 @@ const transition = "[700 ms] ease-in-out";
             class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item>
             <img
-              src="chessmunk.png"
+              src="chessmunk.avif"
               class="absolute block w-full"
               alt="Chessmunk" />
           </div>
