@@ -66,6 +66,7 @@ const transition = "[700 ms] ease-in-out";
             <img
               src="protodune-group.avif"
               class="absolute block w-full"
+              width="10px"
               alt="Group photo"  />
           </div>
           {/* <!--Second item--> */}
