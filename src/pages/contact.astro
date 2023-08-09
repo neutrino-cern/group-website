@@ -17,28 +17,26 @@ import Contactform from "@components/contactform.astro";
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
         <h2 class="font-medium text-2xl text-gray-800">Contact EP-NU</h2>
-        <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          We will likely never answer, but you can try!
-        </p>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
             <span>1, Esplanade des Particules, 1211 Meyrin</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello.neutrinos@cern.ch"
-              >hello.neutrinos@cern.ch</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:123456">123456</a
-            >
           </div>
+          
+        </div>
+        <div class="w-full mt-8 border-2 rounded-md mr-10">
+          <span>
+          <iframe src="https://snazzymaps.com/embed/514409"/ width="100%" height="250px"/>
+          </span>
         </div>
       </div>
       <div>
         <Contactform />
       </div>
+      
     </div>
+    
+
+
   </Container>
 </Layout>
