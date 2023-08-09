@@ -1,25 +1,27 @@
-import { useEffect, useState
+import { useEffect, useState } from "preact/hooks";
 
-} from "preact/hooks";
-import type { FunctionalComponent } from "preact";
+export default function ThemeToggle() {
+  const [theme, setTheme] = useState("light");
 
-export default function ThemeToggle(): FunctionalComponent {
- const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") ?? "light";
+    setTheme(storedTheme);
+  }, []);
 
- const handleClick = () => {
-   setTheme(theme === "light" ? "dark" : "light");
- };
+  const handleClick = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
- useEffect(() => {
-   if (theme === "dark") {
-     document.documentElement.classList.add("dark");
-   } else {
-     document.documentElement.classList.remove("dark");
-   }
-   localStorage.setItem("theme", theme);
- }, [theme]);
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
- return (
-   <button onClick={handleClick}>{theme === "light" ? "🌙" : "🌞"}</button>
- );
+  return (
+    <button onClick={handleClick}>{theme === "light" ? "🌙" : "🌞"}</button>
+  );
 }
