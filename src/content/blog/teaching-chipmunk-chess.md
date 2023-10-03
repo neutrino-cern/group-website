@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Teaching a Chipmunk to Play Chess"
 snippet: "Chipmunks are smarter than they look. When properly trained, they can understand abstract topics like neutrinos."
 image: {
