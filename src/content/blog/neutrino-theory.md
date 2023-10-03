@@ -6,7 +6,7 @@ image: {
     src: "https://www.symmetrymagazine.org/sites/default/files/styles/2015_hero/public/images/standard/Header_Which_neutrino_is_the_heaviest.jpg?itok=mWdCJo10",
     alt: "frontend master"
 }
-publishDate: "2023-10-03 10:50"
+publishDate: "2023-10-02 10:50"
 category: "Research"
 author: "Joachim Kopp"
 tags: [neutrino, theory, research]
