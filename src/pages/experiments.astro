@@ -2,9 +2,14 @@
 import { Icon } from "astro-icon";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
+import { Picture } from "@astrojs/image/components";
 import Sectionhead from "@components/sectionhead.astro";
 import Button from "@components/ui/button.astro";
 import Contactform from "@components/contactform.astro";
+import dune_other from "/src/assets/dune_other_person.jpg";
+import dune_person from "/src/assets/protodune_person.jpg";
+import t2k_first from "/src/assets/t2k_1.jpg";
+import t2k_second from "/src/assets/t2k_2.jpg";
 ---
 
 <Layout title="Our Experiments">
@@ -30,16 +35,52 @@ import Contactform from "@components/contactform.astro";
               </p>
           </div>
           <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full h-80 rounded-lg object-cover object-center" src="protodune_person.avif" alt="a person standing inside the protodune detector">
-              <img class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center" src="dune_other_person.jpg" alt="person standing inside protodune cryostat">
+            <Picture
+                  src={dune_person}
+                  alt="a person standing inside the protodune detector"
+                  widths={[400]}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  aspectRatio="1:1"
+                  background="#ffffff"
+                  fit="cover"
+                  class="w-full h-80 rounded-lg object-cover object-center"
+                />
+            <Picture
+                  src={dune_other}
+                  alt="a person standing inside the protodune cryostat"
+                  widths={[400]}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  aspectRatio="1:1"
+                  background="#ffffff"
+                  fit="cover"
+                  class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center"
+              ></Picture>
           </div>
       
       </div>
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         
         <div class="grid grid-cols-2 gap-4 mt-8">
-          <img class="w-full h-80 rounded-lg object-cover object-center" src="t2k_1.jpg" alt="a boat floating inside the t2k detector">
-            <img class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center" src="t2k_2.jpg" alt="people standing inside the t2k detector">
+          <Picture
+                src={t2k_first}
+                alt="a boat floating inside the t2k detector"
+                widths={[400]}
+                sizes="(max-width: 800px) 100vw, 400px"
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                class="w-full h-80 rounded-lg object-cover object-center"
+              />
+          <Picture
+                src={t2k_second}
+                alt="people standing inside the t2k detector"
+                widths={[400]}
+                sizes="(max-width: 800px) 100vw, 400px"
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center"
+            ></Picture>
         </div>
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">T2K</h2>
