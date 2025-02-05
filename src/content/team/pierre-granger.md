@@ -10,4 +10,5 @@ avatar: {
     alt: "Pierre Granger"
 }
 publishDate: "2025-01-01 15:39"
+isFormerMember: false
 ---

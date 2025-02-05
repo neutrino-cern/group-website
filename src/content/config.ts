@@ -31,6 +31,7 @@ const teamCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
+    isFormerMember: z.boolean().default(false)
   }),
 });
 

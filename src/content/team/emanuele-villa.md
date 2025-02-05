@@ -10,4 +10,5 @@ avatar: {
     alt: "Emmanuele Villa"
 }
 publishDate: "2022-11-08 15:39"
+isFormerMember: false
 ---
