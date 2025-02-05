@@ -41,6 +41,7 @@ const experimentCollection = defineCollection({
     name: z.string(),
     short_description: z.string(),
     description: z.string(),
+    long_description: z.string(),
     publishDate: z.string().transform(str => new Date(str)),
     image1: z.object({
       src: z.string(),

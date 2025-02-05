@@ -6,6 +6,10 @@ description: "A beam of muon neutrinos (or anti-neutrinos) is created at the Jap
 Beam properties are measured at a Near Detector complex, before the neutrinos travel 300 km towards the East of Japan. 
 While travelling, most neutrinos change their flavour, and are then measured again at the Far Detector, 
 located underneath Mount Ikeno near Kamioka."
+long_description: "A beam of muon neutrinos (or anti-neutrinos) is created at the Japan Proton Accelerator Research Complex in Tokai.
+Beam properties are measured at a Near Detector complex, before the neutrinos travel 300 km towards the East of Japan. 
+While travelling, most neutrinos change their flavour, and are then measured again at the Far Detector, 
+located underneath Mount Ikeno near Kamioka."
 publishDate: "2022-11-09 15:39"
 image1: {
     src: "/src/assets/t2k_1.jpg",

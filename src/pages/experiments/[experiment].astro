@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import slugify from '@sindresorhus/slugify';
+import Slink from "@components/ui/slink.astro";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+
+
+// Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const experiments = await getCollection("experiments", ({ data }) => {
+    return !data.draft && data.publishDate < new Date();
+  });
+  
+  return experiments.map((entry) => ({
+    params: { experiment: slugify(entry.data.name) },
+    props: { entry },
+  }));
+}
+
+// Get the entry directly from the prop on render
+const { entry } = Astro.props;
+
+
+// INSPIRE test
+// import fetch from 'node-fetch';
+
+// let response = await fetch('https://inspirehep.net/api/literature?fields=titles&sort=mostrecent&size=5&q=a%20L.I.Munteanu.1');
+// let data = await response.json();
+
+// Log the json tree to the console (pretty printed)
+// console.log(JSON.stringify(data, null, 2));
+
+// TODO: fix ugly member page buttons
+---
+
+<Layout title={entry.data.name}>
+    <Container>
+      
+      <main class="md:flex place-items-left pt-6 pb-8 md:pt-12 md:pb-24">
+
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <h2 class="text-2xl">
+            {entry.data.name}
+          </h2>
+          <h3 class="text-xl text-slate-600 font-bold">
+            {entry.data.short_description}
+          </h3>
+          <p class="text-lg mt-4 text-slate-600 max-w-xl pr-4">
+            {entry.data.long_description}
+          </p>
+
+
+        </div>
+        
+      </main>
+
+  </Container>
+</Layout>
+
+
