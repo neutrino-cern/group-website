@@ -9,11 +9,11 @@ The research group at CERN focuses on several core areas within the ProtoDUNE fr
 "
 publishDate: "2022-11-09 15:39"
 image1: {
-    src: "/src/assets/protodune_1.png",
+    src: "/experiments-pics/protodune_1.png",
     alt: "a picture of inside the protoDUNE cryostat"
 }
 image2: {
-    src: "/src/assets/protodune_1.png",
+    src: "/experiments-pics/protodune_1.png",
     alt: "a picture of inside the protoDUNE cryostat"
 }
 ---

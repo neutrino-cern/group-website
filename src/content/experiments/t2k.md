@@ -12,11 +12,11 @@ While travelling, most neutrinos change their flavour, and are then measured aga
 located underneath Mount Ikeno near Kamioka."
 publishDate: "2022-11-09 15:39"
 image1: {
-    src: "/src/assets/t2k_1.jpg",
+    src: "/experiments-pics/t2k_1.jpg",
     alt: "a boat floating inside the t2k detector"
 }
 image2: {
-    src: "/src/assets/t2k_2.jpg",
+    src: "/experiments-pics/t2k_2.jpg",
     alt: "people standing inside the t2k detector"
 }
 ---

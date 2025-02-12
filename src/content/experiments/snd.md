@@ -8,11 +8,11 @@ Neutrinos detected in the unique forward region of SND@LHC are a probe for heavy
 "
 publishDate: "2022-11-09 15:39"
 image1: {
-    src: "/src/assets/snd_1.png",
+    src: "/experiments-pics/snd_1.png",
     alt: "a picture of someone working on SND"
 }
 image2: {
-    src: "/src/assets/snd_2.png",
+    src: "/experiments-pics/snd_2.png",
     alt: "SND picture"
 }
 ---
