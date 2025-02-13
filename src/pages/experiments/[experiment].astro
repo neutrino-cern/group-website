@@ -37,7 +37,7 @@ const { entry } = Astro.props;
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 class="text-2xl font-bold mb-4">About the Experiment</h2>
-            <p class="text-lg text-slate-600">{entry.data.long_description}</p>
+            <p class="text-lg text-slate-600 prose"><Fragment set:html={entry.data.long_description}></Fragment></p>
           </div>
           <div>
             <Picture src={entry.data.image1.src} alt={entry.data.image1.alt} widths={[400]}
@@ -74,6 +74,7 @@ const { entry } = Astro.props;
   position: relative;
   z-index: 2;
 }
+
 </style>
 
 
