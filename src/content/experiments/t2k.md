@@ -11,6 +11,7 @@ Beam properties are measured at a Near Detector complex, before the neutrinos tr
 While travelling, most neutrinos change their flavour, and are then measured again at the Far Detector, 
 located underneath Mount Ikeno near Kamioka."
 publishDate: "2022-11-09 15:39"
+rank: 3
 image1: {
     src: "/experiments-pics/t2k_1.jpg",
     alt: "a boat floating inside the t2k detector"

@@ -43,6 +43,7 @@ const experimentCollection = defineCollection({
     description: z.string(),
     long_description: z.string(),
     publishDate: z.string().transform(str => new Date(str)),
+    rank: z.number(),
     image1: z.object({
       src: z.string(),
       alt: z.string(),

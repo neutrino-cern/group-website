@@ -7,6 +7,7 @@ long_description: "Located 480 m downstream of IP1 in the unused TI18 tunnel, th
 Neutrinos detected in the unique forward region of SND@LHC are a probe for heavy-flavour production in a region currently inaccessible to the other LHC experiments like ATLAS, CMS and LHCb.  Also, studying these high energy neutrinos is of  particular interest for future circular colliders and for predictions of very high-energy atmospheric neutrinos. Lastly, the detector is also sensitive to Feebly Interacting Particles (FIPs) through scattering off nuclei and electrons in the detector target. The direct-search strategy gives the experiment sensitivity in a region of the FIP mass-coupling parameter space that is complementary to other indirect searches. 
 "
 publishDate: "2022-11-09 15:39"
+rank: 5
 image1: {
     src: "/experiments-pics/snd_1.png",
     alt: "a picture of someone working on SND"

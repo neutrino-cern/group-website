@@ -9,6 +9,8 @@ import slugify from '@sindresorhus/slugify';
 const experiments = await getCollection("experiments", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
+// Sort the collection by the 'rank' property
+experiments.sort((a, b) => a.data.rank - b.data.rank);
 ---
 
 <Layout title="Our Experiments">
