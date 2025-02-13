@@ -7,11 +7,11 @@ long_description: "State-of-the-art neutrino detectors are required to be very f
 publishDate: "2022-11-09 15:39"
 rank: 6
 image1: {
-    src: "/experiments-pics/3det_1.png",
-    alt: "manudacturing process"
-}
-image2: {
     src: "/experiments-pics/3det_2.png",
     alt: "3D printed supercube"
+}
+image2: {
+    src: "/experiments-pics/3det_1.png",
+    alt: "manudacturing process"
 }
 ---
