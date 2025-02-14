@@ -24,7 +24,7 @@ experiments.sort((a, b) => a.data.rank - b.data.rank);
         {
           experiments.map((expEntry, index) => (
           <a href={"/experiments/" + slugify(expEntry.data.name)} class="block group">
-            <div class={`gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 group-hover:shadow-xl group-hover:scale-105 transition-transform duration-300 ${index % 2 === 1 ? "order-2" : ""}`}>
+            <div class={`gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 group-hover:shadow-xl group-hover:rounded-lg group-hover:scale-105 transition-transform duration-300 ${index % 2 === 1 ? "order-2" : ""}`}>
             
               <div class={`font-light text-gray-500 sm:text-lg dark:text-gray-400 ${index % 2 === 1 ? "order-2" : ""} group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300`}>
                   <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{expEntry.data.name}</h2>
