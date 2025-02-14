@@ -10,36 +10,42 @@ const features = [
     description:
       "Neutrinos oscillate between three flavors: electron, muon, and tau. We study this phenomenon to understand the nature of neutrinos.",
     icon: "mdi:sine-wave",
+    path: "",
   },
   {
     title: "Machine Learned Reconstruction",
     description:
       "We use machine learning to reconstruct neutrino interactions in liquid argon time projection chambers.",
     icon: "akar-icons:network",
+    path: "",
   },
   {
     title: "Neutrino interactions with matter",
     description:
       "We study the ways in which neutrinos interact with the matter around us as an essential part of interpreting data from neutrino oscillation experiments.",
     icon: "ant-design:question-outlined",
+    path: "/blog/nu-interactions",
   },
   {
     title: "Supernova Neutrinos",
     description:
       "We study the neutrinos emitted from supernovae to understand the explosion mechanism and the formation of neutron stars.",
     icon: "mdi:star-shooting-outline",
+    path: "",
   },
   {
     title: "Neutrino Theory",
     description:
       "We use theorethical insights to advance our understanding of neutrinos, how they interact and what determines their fundamental properties.",
     icon: "mdi:chart-bell-curve",
+    path: "/blog/neutrino-theory",
   },
   {
     title: "Outreach",
     description:
       "We are passionate about outreach and education. We organize visits to the Neutrino Platform at CERN and more...",
     icon: "mdi:brain",
+    path: "/blog/neutrino-outreach",
   },
 ];
 ---
@@ -54,17 +60,20 @@ const features = [
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+  {features.map((item) => {
+    const Wrapper = item.path ? 'a' : 'div';
+    const wrapperProps = item.path ? { href: item.path, class: "group flex gap-4 items-start transition-transform duration-300 hover:scale-105 hover:shadow-xl" } : { class: "group flex gap-4 items-start" };
+    
+    return (
+      <Wrapper {...wrapperProps}>
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg group-hover:text-gray-900 transition-colors duration-300">{item.title}</h3>
+          <p class="text-slate-500 mt-2 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{item.description}</p>
         </div>
-      </div>
-    ))
-  }
+      </Wrapper>
+    );
+  })}
 </div>
