@@ -14,7 +14,7 @@ image1: {
     alt: "a picture of inside the protoDUNE cryostat"
 }
 image2: {
-    src: "/experiments-pics/protodune_1.png",
-    alt: "a picture of inside the protoDUNE cryostat"
+    src: "https://cerncourier.com/wp-content/uploads/2024/07/CCJulAug24_NEUTRINO_precision-635x357.jpg",
+    alt: " A 6 GeV charged pion (left) ejects a proton (top) from an argon nucleus in the single-phase ProtoDUNE detector at CERN"
 }
 ---
