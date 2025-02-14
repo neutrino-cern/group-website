@@ -23,10 +23,10 @@ experiments.sort((a, b) => a.data.rank - b.data.rank);
     <section class="bg-white dark:bg-gray-900">
         {
           experiments.map((expEntry, index) => (
-          <a href={"/experiments/" + slugify(expEntry.data.name)}>
-            <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 group">
+          <a href={"/experiments/" + slugify(expEntry.data.name)} class="block group">
+            <div class={`gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 group-hover:shadow-xl group-hover:scale-105 transition-transform duration-300 ${index % 2 === 1 ? "order-2" : ""}`}>
             
-              <div class={`font-light text-gray-500 sm:text-lg dark:text-gray-400 ${index % 2 === 1 ? "order-2" : ""}`}>
+              <div class={`font-light text-gray-500 sm:text-lg dark:text-gray-400 ${index % 2 === 1 ? "order-2" : ""} group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300`}>
                   <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{expEntry.data.name}</h2>
                   <p class="mb-4">{expEntry.data.short_description}</p>
                   <p>
@@ -42,7 +42,7 @@ experiments.sort((a, b) => a.data.rank - b.data.rank);
                     aspectRatio="1:1"
                     background="#ffffff"
                     fit="cover"
-                    class="w-full h-80 rounded-lg object-cover object-center transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                    class="w-full h-80 rounded-lg object-cover object-center transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-xl"
                   />
               <Picture
                     src={expEntry.data.image2.src}
@@ -52,16 +52,14 @@ experiments.sort((a, b) => a.data.rank - b.data.rank);
                     aspectRatio="1:1"
                     background="#ffffff"
                     fit="cover"
-                    class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                    class="mt-20 w-full h-80 lg:mt-10 rounded-lg object-cover object-center transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-xl"
                   />
             </div>
           
           </div>
         </a>
-
-          ))
-        }
-
-  </section>
+        ))
+      }
+    </section>
   </Container>
 </Layout>
