@@ -2,7 +2,7 @@
 draft: false
 name: "Adrien Blanchet"
 title: "CERN Research Fellow"
-description: "Is this guy actually working?"
+description: "Oscillation analysis T2K, simulation & reconstruction of ND280"
 publicationLink: "https://inspirehep.net/authors/1731423"
 githubLink: "https://github.com/nadrino"
 avatar: {
