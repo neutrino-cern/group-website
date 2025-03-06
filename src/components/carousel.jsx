@@ -45,14 +45,14 @@ const transition = "[1400 ms] ease-in-out";
       
         {/* <!--Carousel items--> */}
         <div
-        class="relative w-full overflow-hidden aspect-[4/3] rounded-xl after:clear-both after:block after:content-['']">
+        class="relative w-full overflow-hidden aspect-[16/10] rounded-xl after:clear-both after:block after:content-['']">
           {/* <!--First item--> */}
           <div
             class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-carousel-active>
             <img
-              src="protodune-group.avif"
+              src="group_pic_merged.jpg"
               class="absolute block w-full"
               width="10px"
               alt="Group photo"  />
