@@ -2,7 +2,7 @@
 draft: false
 name: "Ciaran Hasnip"
 title: "CERN Research Fellow"
-description: "Is this guy actually working?"
+description: "Measuring neutrino interactions and oscillations for T2K and DUNE, BSM physics with ProtoDUNE"
 publicationLink: "https://inspirehep.net/authors/1758309"
 githubLink: "https://github.com/CiaranH1997"
 avatar: {
