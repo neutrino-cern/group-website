@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+// Get the entry directly from the prop on render
+const collection = await getCollection("outreach");
+const entry = collection.find((item) => item.slug === 'neutrino-outreach');
+const { Content } = await entry.render();
+---
+
+<Layout title="Outreach">
+  <section class="relative bg-gray-900 text-white py-20">
+    <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://home.cern/sites/default/files/image/experiment/2015/11/cenf.jpg');"></div>
+    <div class="relative container mx-auto px-6 lg:px-20">
+      <h1 class="text-5xl lg:text-6xl font-bold text-center">{entry.data.title}</h1>
+      <p class="mt-4 text-lg lg:text-xl text-center">{entry.data.subtitle}</p>
+    </div>
+  </section>
+
+  <Container>
+    <div class="mx-auto prose prose-lg mt-8 max-w-3xl text-gray-800">
+      <Content />
+    </div>
+    <div class="text-center mt-10">
+      <a
+        href="/"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition text-gray-700"
+        >← Back to Home</a
+      >
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    color: #1a202c; /* Darker text color for headings */
+  }
+  .prose p {
+    color: #4a5568; /* Darker text color for paragraphs */
+  }
+  .prose a {
+    color: #3182ce; /* Blue color for links */
+    text-decoration: none;
+  }
+  .prose a:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -8,8 +8,13 @@ import slugify from '@sindresorhus/slugify';
 
 // Filter team member entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
+  return !data.draft && data.publishDate < new Date() && !data.isFormerMember;
 });
+
+const publishedFormerTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date() && data.isFormerMember;
+});
+
 
 // Filter visitor entries with 'draft: false' & date before current date
 const publishedVisitors = await getCollection("visitors", ({ data }) => {
@@ -38,6 +43,51 @@ const publishedVisitors = await getCollection("visitors", ({ data }) => {
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <a href={"/team/" + slugify(teamMemberEntry.data.name)}>
+                <Picture
+                  src={teamMemberEntry.data.avatar.src}
+                  alt={teamMemberEntry.data.avatar.alt}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  widths={[200, 400, 600]}
+                  aspectRatio="1:1"
+                  background="#ffffff"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
+              </a>
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">
+                {teamMemberEntry.data.name}
+              </h2>
+              <h3 class="text-sm text-slate-600 font-bold">
+                {teamMemberEntry.data.title}
+              </h3>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.description}
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Former Members.
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        We miss you 😢 
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        publishedFormerTeamMembers.map((teamMemberEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
               <a href={"/team/" + slugify(teamMemberEntry.data.name)}>
