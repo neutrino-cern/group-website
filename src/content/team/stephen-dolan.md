@@ -9,6 +9,7 @@ avatar: {
     src: "/member-photos/stephen.avif",
     alt: "Stephen Dolan"
 }
+group: "EP-NU"
 publishDate: "2022-11-08 15:39"
 isFormerMember: false
 ---

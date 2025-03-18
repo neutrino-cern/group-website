@@ -8,5 +8,6 @@ avatar: {
     src: "/member-photos/filippo.jpg",
     alt: "Filippo Bramati"
 }
+group: "EP-NU"
 publishDate: "2025-01-01 15:39"
 ---

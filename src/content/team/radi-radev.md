@@ -9,6 +9,7 @@ avatar: {
     src: "/member-photos/radi2.jpeg",
     alt: "Radi Radev"
 }
+group: "EP-NU"
 publishDate: "2022-11-07 15:39"
 isFormerMember: true
 ---
