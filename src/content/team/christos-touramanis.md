@@ -8,6 +8,7 @@ avatar: {
     src: "/member-photos/christos.jpeg",
     alt: "Christos Touramanis"
 }
+group: "EP-NU"
 publishDate: "2025-02-17 15:39"
 isFormerMember: false
 ---

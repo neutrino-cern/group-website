@@ -8,6 +8,7 @@ avatar: {
     src: "/member-photos/animesh.png",
     alt: "Animesh Chatterjee"
 }
+group: "EP-NU"
 publishDate: "2025-01-01 15:39"
 isFormerMember: false
 ---

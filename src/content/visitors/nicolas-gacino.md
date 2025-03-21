@@ -7,5 +7,6 @@ avatar: {
     src: "/visitor-photos/nico.avif",
     alt: "Nicolás Gaciño"
 }
+group: "EP-NU"
 publishDate: "2022-11-08 15:39"
 ---
