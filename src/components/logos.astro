@@ -6,6 +6,7 @@ import duneLogo from "/src/assets/experiment-logos/dune-logo-v.jpg";
 import t2kLogo from "/src/assets/experiment-logos/t2k_logo_small.png";
 import sndLogo from "/src/assets/experiment-logos/snd-logo.png";
 import icarusLogo from "/src/assets/experiment-logos/icarus.png";
+import nuscopeLogo from "/static/experiments-pics/nuscope.png";
 
 ---
 
@@ -45,7 +46,7 @@ import icarusLogo from "/src/assets/experiment-logos/icarus.png";
     loading="eager"
     class="w-full"
     />
-    <a/>
+    </a>
 
     <a href="https://icarus.fnal.gov/" target="_blank" rel="noopener noreferrer">
     <Picture
@@ -57,8 +58,19 @@ import icarusLogo from "/src/assets/experiment-logos/icarus.png";
     class="w-full"
     />
     </a>
-    
+  </div>
 
+  <!-- Second row of logos -->
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+    <a href="https://nuscope.web.cern.ch/" target="_blank" rel="noopener noreferrer">
+    <Picture
+    src={nuscopeLogo}
+    alt="NuScope"
+    widths={[200, 400, 600, 1200, 2400]}
+    sizes="180px"
+    loading="eager"
+    class="w-full"
+    />
+    </a>
   </div>
 </div>
-
