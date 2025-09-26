@@ -1,0 +1,42 @@
+---
+
+import { getCollection } from 'astro:content';
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+export const title = "Publications";
+const publications = await getCollection('publication');
+---
+
+<Layout title="Publications">
+  <section class="relative bg-gray-900 text-white py-20">
+    <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('/publications.jpg');"></div>
+    <div class="relative container mx-auto px-6 lg:px-20">
+      <h1 class="text-5xl lg:text-6xl font-bold text-center">Group Publications</h1>
+      <p class="mt-4 text-lg lg:text-xl text-center">Recent scientific publications from our group.</p>
+    </div>
+  </section>
+
+  <Container>
+    <div class="mx-auto prose prose-lg mt-8 max-w-3xl text-gray-800">
+      <ul class="space-y-6">
+        {publications.sort((a, b) => b.data.year - a.data.year).map(pub => (
+          <li class="border-b pb-4">
+            <div class="font-semibold text-gray-900">{pub.data.title}</div>
+            <div class="text-sm text-gray-600 mb-1">{pub.data.authors}</div>
+            <div class="text-sm italic text-gray-500">{pub.data.journal} ({pub.data.year})
+              {pub.data.link && (
+                <> [<a href={pub.data.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">link</a>]</>
+              )}
+            </div>
+            {pub.data.status && (
+              <div class="text-xs text-gray-700 mt-1"><span class="font-semibold">Status:</span> {pub.data.status}</div>
+            )}
+            {pub.data.contributions && (
+              <div class="text-xs text-gray-500 mt-1"><span class="font-semibold">Contributions:</span> {pub.data.contributions}</div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</Layout>
