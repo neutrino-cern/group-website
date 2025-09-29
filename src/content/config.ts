@@ -72,6 +72,18 @@ const experimentCollection = defineCollection({
   }),
 });
 
+const publicationCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    authors: z.string(),
+    journal: z.string(),
+    year: z.number(),
+    link: z.string().url().optional(),
+    status: z.string().optional(),
+    contributions: z.string().optional(),
+  }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
@@ -79,5 +91,6 @@ export const collections = {
   'team': teamCollection,
   'visitors': teamCollection,
   'experiments': experimentCollection,
-  'outreach': outreachCollection
+  'outreach': outreachCollection,
+  'publication': publicationCollection,
 };
