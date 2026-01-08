@@ -11,5 +11,5 @@ avatar: {
 }
 group: "EP-NU"
 publishDate: "2025-01-01 15:39"
-isFormerMember: false
+isFormerMember: true
 ---
