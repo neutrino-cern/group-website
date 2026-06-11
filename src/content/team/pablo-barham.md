@@ -9,7 +9,7 @@ avatar: {
     src: "/member-photos/pablo.avif",
     alt: "Pablo Barham Alzás"
 }
-group: "EP-NU"
+group: "EP-UNU"
 publishDate: "2022-11-09 15:39"
 isFormerMember: false
 ---
