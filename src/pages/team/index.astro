@@ -64,7 +64,7 @@ const publishedVisitors = await getCollection("visitors", ({ data }) => {
                 <h2 class="text-lg text-gray-800 flex items-center justify-center font-bold">
                 {teamMemberEntry.data.name}
                 <span class={`inline-block text-xs font-semibold ml-2 px-2.5 py-0.5 rounded ${
-                  teamMemberEntry.data.group === 'EP-NU' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'
+                  teamMemberEntry.data.group === 'EP-NU' ? 'bg-blue-100 text-blue-800' : teamMemberEntry.data.group === 'EP-UNU' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                 }`}>
                   {teamMemberEntry.data.group}
                 </span>
