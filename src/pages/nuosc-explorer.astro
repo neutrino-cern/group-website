@@ -47,16 +47,31 @@ const examples = [
         configuration can be bookmarked or shared — try the examples below.
       </p>
     </div>
+  </Container>
 
-    <div class="mt-8">
-      <iframe
-        src={app}
-        title="nuosc-explorer — interactive neutrino oscillation probabilities"
-        loading="lazy"
-        class="w-full h-[85vh] min-h-[700px] rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg"
-      ></iframe>
+  <!-- full-bleed embed: intentionally outside <Container> so it can use
+       (nearly) the whole viewport, like the hero section does -->
+  <div class="px-3 lg:px-8 mt-8">
+    <div class="flex justify-end mb-2">
+      <button
+        id="fs-btn"
+        class="bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition text-gray-700 dark:text-gray-200 text-sm"
+        title="Show the explorer fullscreen"
+      >
+        ⤢ Fullscreen
+      </button>
     </div>
+    <iframe
+      id="explorer-frame"
+      src={app}
+      title="nuosc-explorer — interactive neutrino oscillation probabilities"
+      loading="lazy"
+      allow="fullscreen"
+      class="w-full h-[88vh] min-h-[760px] rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg"
+    ></iframe>
+  </div>
 
+  <Container>
     <div class="flex flex-wrap justify-center gap-3 mt-6">
       {
         examples.map((ex) => (
@@ -90,6 +105,12 @@ const examples = [
     </div>
   </Container>
 </Layout>
+
+<script>
+  const btn = document.getElementById("fs-btn");
+  const frame = document.getElementById("explorer-frame");
+  btn?.addEventListener("click", () => frame?.requestFullscreen?.());
+</script>
 
 <style>
   .prose a {
