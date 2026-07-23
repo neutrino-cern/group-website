@@ -1,0 +1,101 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+const app = "https://nuosc-explorer.web.cern.ch";
+
+// example configurations demonstrating the shareable-URL feature
+const examples = [
+  { label: "νμ disappearance (T2K-like)", query: "?L=295&emax=3" },
+  { label: "Inverted ordering", query: "?mo=Inverted" },
+  { label: "±1σ band, νe beam", query: "?tab=band&flav=E" },
+  { label: "θ₂₃ – δCP contour", query: "?tab=contour&cp=s23,dcp" },
+];
+---
+
+<Layout title="Oscillation Explorer">
+  <section class="relative bg-gray-900 text-white py-20">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-50"
+      style="background-image: url('https://home.cern/sites/default/files/image/experiment/2015/11/cenf.jpg');"
+    >
+    </div>
+    <div class="relative container mx-auto px-6 lg:px-20">
+      <h1 class="text-5xl lg:text-6xl font-bold text-center">
+        Neutrino Oscillation Explorer
+      </h1>
+      <p class="mt-4 text-lg lg:text-xl text-center">
+        Play with the parameters that govern how neutrinos change flavour
+      </p>
+    </div>
+  </section>
+
+  <Container>
+    <div class="mx-auto prose prose-lg mt-8 max-w-3xl dark:prose-invert">
+      <p>
+        The explorer below computes three-flavour oscillation probabilities
+        live — drag any parameter and watch all channels respond. It includes
+        matter effects and non-standard interactions (NSI), published
+        parameter sets (T2K, NOvA, PDG, NuFIT), and analysis views (parameter
+        sensitivities, uncertainty bands, Asimov contours) powered by
+        automatic differentiation through
+        <a href="https://github.com/pgranger23/jaxnu-osc" target="_blank"
+          rel="noopener noreferrer">jaxnu</a>.
+      </p>
+      <p>
+        Everything you set is encoded in the tool's URL, so a particular
+        configuration can be bookmarked or shared — try the examples below.
+      </p>
+    </div>
+
+    <div class="mt-8">
+      <iframe
+        src={app}
+        title="nuosc-explorer — interactive neutrino oscillation probabilities"
+        loading="lazy"
+        class="w-full h-[85vh] min-h-[700px] rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg"
+      ></iframe>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mt-6">
+      {
+        examples.map((ex) => (
+          <a
+            href={app + ex.query}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition text-gray-700 dark:text-gray-200 text-sm"
+          >
+            {ex.label}
+          </a>
+        ))
+      }
+      <a
+        href={app}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition text-white text-sm font-semibold"
+      >
+        Open full screen ↗
+      </a>
+    </div>
+
+    <div class="text-center mt-4 mb-10 text-sm text-gray-500 dark:text-gray-400">
+      Runs on CERN PaaS · physics by
+      <a href="https://github.com/pgranger23/jaxnu-osc" class="underline"
+        target="_blank" rel="noopener noreferrer">jaxnu</a> · interface from
+      <a href="https://github.com/lauramunteanu/nuosc-explorer"
+        class="underline" target="_blank" rel="noopener noreferrer"
+        >nuosc-explorer</a>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .prose a {
+    text-decoration: none;
+  }
+  .prose a:hover {
+    text-decoration: underline;
+  }
+</style>
